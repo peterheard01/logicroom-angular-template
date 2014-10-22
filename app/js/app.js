@@ -4,6 +4,11 @@ app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.control
 
     $locationProvider.html5Mode(true);
 
+//    $routeProvider.when('/home', {
+//        templateUrl: 'index.html'
+//    });
+
+
     $routeProvider.when('/resource', {
         templateUrl: 'resource.html'
     });

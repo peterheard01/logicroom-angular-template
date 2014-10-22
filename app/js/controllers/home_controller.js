@@ -1,6 +1,8 @@
 angular.module('app.controllers').controller('HomeController',
-    function($scope) {
+    function($scope,HomeService) {
 
-        console.log('you are home');
+        HomeService.SayHello();
+
+        $scope.BLAH = "hello";
 
     });
