@@ -1,6 +1,8 @@
 //http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/
 angular.module('app.controllers').controller('ResourceController',
-    function($scope,$resource) {
+    function($scope,$resource,HomeService) {
+
+        HomeService.SayToken();
 
 
         var endpoint = '/books/:id';

@@ -5,4 +5,6 @@ angular.module('app.controllers').controller('HomeController',
 
         $scope.BLAH = "hello";
 
+        HomeService.SetToken('HomeToken');
+
     });
