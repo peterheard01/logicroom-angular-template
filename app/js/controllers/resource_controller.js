@@ -3,7 +3,7 @@ angular.module('app.controllers').controller('ResourceController',
     function($scope,$resource) {
 
 
-        var endpoint = '/books:id';
+        var endpoint = '/books/:id';
         var books =  $resource('',
             {
                 //you can stuff params in here like the :id from above
@@ -46,24 +46,24 @@ angular.module('app.controllers').controller('ResourceController',
 
 
         books.GET(function(data){
-            console.log('getting books');
+            console.log('GETting books');
             angular.forEach(data,function(book){
                 console.log(book);
             });
         });
 
         books.PUT({id:1}).$promise.then(function(data){
-            console.log('putting books');
+            console.log('PUTting books');
             console.log(data);
         });
 
         books.POST({name:'1984'}).$promise.then(function(data){
-            console.log('putting books');
+            console.log('POSTing books');
             console.log(data);
         });
 
         books.DELETE({id:1}).$promise.then(function(data){
-            console.log('putting books');
+            console.log('DELETING books');
             console.log(data);
         });
 

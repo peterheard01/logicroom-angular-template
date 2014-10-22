@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
 </head>
 <body>
+
+<a href="/#/home">home</a><br>
 <a href="/#/bootstrap">bootstrap examples</a><br>
 <a href="/#/resource">resource examples</a>
     <div id="view" ng-view></div>
