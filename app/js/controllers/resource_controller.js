@@ -2,13 +2,15 @@
 angular.module('app.controllers').controller('ResourceController',
     function($scope,$resource) {
 
+
+        var endpoint = '/books:id';
         var books =  $resource('',
             {
                 //you can stuff params in here like the :id from above
             },
             {
                 GET: {
-                    url:'/books',
+                    url:endpoint,
                     method: 'GET',
                     isArray: true,
                     cache: false//,
@@ -16,7 +18,7 @@ angular.module('app.controllers').controller('ResourceController',
                     //transformResponse: QuoteResponseTransformer
                 },
                 PUT: {
-                    url:'/books',
+                    url:endpoint,
                     method: 'PUT',
                     isArray: false,
                     cache: false//,
@@ -24,7 +26,7 @@ angular.module('app.controllers').controller('ResourceController',
                     //transformResponse: QuoteResponseTransformer
                 },
                 POST: {
-                    url:'/books',
+                    url:endpoint,
                     method: 'Post',
                     isArray: false,
                     cache: false//,
@@ -32,7 +34,7 @@ angular.module('app.controllers').controller('ResourceController',
                     //transformResponse: QuoteResponseTransformer
                 },
                 DELETE: {
-                    url:'/books',
+                    url:endpoint,
                     method: 'Delete',
                     isArray: false,
                     cache: false//,
@@ -41,31 +43,28 @@ angular.module('app.controllers').controller('ResourceController',
                 }
             });
 
+
+
         books.GET(function(data){
-
             console.log('getting books');
-
             angular.forEach(data,function(book){
                 console.log(book);
             });
         });
 
-        books.PUT().$promise.then(function(data){
-
-            console.log('putting books');
-            console.log(data);
-
-        });
-
-        books.POST(function(data){
+        books.PUT({id:1}).$promise.then(function(data){
             console.log('putting books');
             console.log(data);
         });
 
-        books.DELETE(function(data){
+        books.POST({name:'1984'}).$promise.then(function(data){
             console.log('putting books');
             console.log(data);
+        });
 
+        books.DELETE({id:1}).$promise.then(function(data){
+            console.log('putting books');
+            console.log(data);
         });
 
     });
