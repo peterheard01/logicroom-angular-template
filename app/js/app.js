@@ -4,6 +4,10 @@ app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.control
 
     $locationProvider.html5Mode(true);
 
+    $routeProvider.when('/resource', {
+        templateUrl: 'resource.html'
+    });
+
 
     $routeProvider.when('/bootstrap', {
         templateUrl: 'bootstrap.html'
@@ -13,8 +17,8 @@ app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.control
 
 });
 
-angular.module('app.services', ['ngResource']);
-angular.module('app.controllers', []);
+angular.module('app.services',[]);
+angular.module('app.controllers',[]);
 angular.module('app.directives', []);
 angular.module('app.filters', []);
 angular.module('app.templates', []);
