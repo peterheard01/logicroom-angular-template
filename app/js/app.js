@@ -4,10 +4,14 @@ app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.control
 
     $locationProvider.html5Mode(true);
 
+    $routeProvider.when('/jqueryui', {
+      templateUrl: 'jqueryui.html'
+    });
 
-  $routeProvider.when('/fontawesome', {
-    templateUrl: 'fontawesome.html'
-  });
+
+    $routeProvider.when('/fontawesome', {
+      templateUrl: 'fontawesome.html'
+    });
 
 
     $routeProvider.when('/angularbootstrap', {

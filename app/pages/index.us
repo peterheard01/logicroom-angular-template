@@ -10,7 +10,8 @@
 <a href="/#/bootstrap">bootstrap examples</a><br>
 <a href="/#/resource">resource examples</a><br>
 <a href="/#/angularbootstrap">angular bootstrap</a><br>
-<a href="/#/fontawesome">font awesome</a>
+<a href="/#/fontawesome">font awesome</a><br>
+<a href="/#/jQueryUi">jquery ui</a><br>
 
 
 <div id="view" ng-view></div>
