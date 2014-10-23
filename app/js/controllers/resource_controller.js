@@ -2,7 +2,7 @@
 angular.module('app.controllers').controller('ResourceController',
     function($scope,$resource,HomeService) {
 
-        HomeService.SayToken();
+        //HomeService.SayToken();
 
 
         var endpoint = '/books/:id';
@@ -54,17 +54,23 @@ angular.module('app.controllers').controller('ResourceController',
             });
         });
 
-        books.PUT({id:1}).$promise.then(function(data){
+        books.PUT().$promise.then(function(data){
             console.log('PUTting books');
             console.log(data);
         });
 
-        books.POST({name:'1984'}).$promise.then(function(data){
-            console.log('POSTing books');
-            console.log(data);
+        books.POST().$promise.then(function(data){
+
+            var dddd = angular.toJson(data);
+            console.log(dddd);
+            var ffff = angular.fromJson(dddd);
+            //var ffff = eval(data);
+            console.log(ffff);
+            console.log(ffff.tokenId);
+
         });
 
-        books.DELETE({id:1}).$promise.then(function(data){
+        books.DELETE().$promise.then(function(data){
             console.log('DELETING books');
             console.log(data);
         });
