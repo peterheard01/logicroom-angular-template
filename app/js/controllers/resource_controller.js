@@ -2,8 +2,7 @@
 angular.module('app.controllers').controller('ResourceController',
     function($scope,$resource,HomeService) {
 
-        //HomeService.SayToken();
-
+        HomeService.SayToken();
 
         var endpoint = '/books/:id';
         var books =  $resource('',

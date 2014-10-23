@@ -1,12 +1,18 @@
 var app;
 
-app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.controllers','app.directives','app.filters','app.templates']).config(function($routeProvider, $locationProvider) {
+app = angular.module('app', ['ngRoute', 'ngResource','app.services','app.controllers','app.directives','app.filters','app.templates','ui.bootstrap']).config(function($routeProvider, $locationProvider) {
 
     $locationProvider.html5Mode(true);
 
-//    $routeProvider.when('/home', {
-//        templateUrl: 'index.html'
-//    });
+
+  $routeProvider.when('/fontawesome', {
+    templateUrl: 'fontawesome.html'
+  });
+
+
+    $routeProvider.when('/angularbootstrap', {
+        templateUrl: 'angularbootstrap.html'
+    });
 
 
     $routeProvider.when('/resource', {

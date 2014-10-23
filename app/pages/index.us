@@ -8,12 +8,12 @@
 
 <a href="/#/home">home</a><br>
 <a href="/#/bootstrap">bootstrap examples</a><br>
-<a href="/#/resource">resource examples</a>
+<a href="/#/resource">resource examples</a><br>
+<a href="/#/angularbootstrap">angular bootstrap</a><br>
+<a href="/#/fontawesome">font awesome</a>
 
 
 <div id="view" ng-view></div>
-
-{{BLAH}}
 
 
 </body>

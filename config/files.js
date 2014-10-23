@@ -18,8 +18,8 @@ module.exports = function(lineman) {
 
       less: {
           main: [
+              "vendor/css/font_awesome/font-awesome.less",
               "vendor/css/bootstrap/bootstrap.less",
-              "app/css/bootstrap_override.less",
               "app/css/main.less"
           ],
           app: "app/css/**/*.less",
