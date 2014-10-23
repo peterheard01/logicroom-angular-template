@@ -5,7 +5,8 @@ module.exports = function(lineman) {
       vendor: [
         "vendor/js/angular/angular.js",
         "vendor/js/jQuery.js",
-        "vendor/js/underscore.js",
+        "vendor/js/jquery-ui.js",
+        "vendor/js/lodash.js",
         "vendor/js/bootstrap/tooltip.js",
         "vendor/js/**/*.js"
       ],
