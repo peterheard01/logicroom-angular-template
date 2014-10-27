@@ -11,6 +11,7 @@
 <a href="/#/resource">resource examples</a><br>
 <a href="/#/angularbootstrap">angular bootstrap</a><br>
 <a href="/#/fontawesome">font awesome</a><br>
+<a href="/#/examples">examples</a><br>
 
 
 <div id="view" ng-view></div>
