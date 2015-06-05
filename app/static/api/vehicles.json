@@ -1,0 +1,17 @@
+[
+    {
+        "type":"car",
+        "id":"Ford",
+        "engineCap":"1600"
+    },
+    {
+        "type":"bike",
+        "id":"Honda",
+        "engineCap":"500"
+    },
+    {
+        "type":"car",
+        "id":"Toyota",
+        "engineCap":"1800"
+    }
+]

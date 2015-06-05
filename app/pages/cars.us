@@ -1,0 +1,11 @@
+
+<div id="cars" ng-controller="CarsController">
+
+    <div ng-repeat="car in vm.Cars">
+
+        <strong>Car Name</strong> : {{car.name}}
+        <strong>Car Engine Size</strong> : {{car.spec}}
+
+    </div>
+
+</div>
