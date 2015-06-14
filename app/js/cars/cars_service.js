@@ -3,17 +3,7 @@ angular.module('app.services').service('CarsService',
 
         function load(){
                 var vehiclesResource =  $resource('',
-                {
-
-                },
-                {
-                    GET: {
-                        url:'/api/vehicles.json',
-                        method: 'GET',
-                        isArray: true,
-                        cache: false
-                    }
-                });
+                {}, {GET: {url:'/api/vehicles.json', method: 'GET', isArray: true, cache: false}});
 
             vehiclesResource.GET(function(vehicles){
 
